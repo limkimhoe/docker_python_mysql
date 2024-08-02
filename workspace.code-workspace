@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "docker_python_mysql",
+			"path": "."
+		}
+	],
+	"settings": {}
+}

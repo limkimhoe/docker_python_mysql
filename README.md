@@ -1,5 +1,5 @@
 # Dev Container with Docker Compose 
-## 2 containers (Python VARIANT=3-bullseye) - Backend and MySQL Setup Instructions
+## 2 containers (Python with Debian 11) - Backend and MySQL Setup Instructions
 ### Pre-Requisites: Ensure you have Visual Studio Code (VSC) and Docker installed with Windows Subsystem for Linux (WSL2).
 
 This guide will assist you in setting up a development container that runs Docker and includes a well-defined tool/runtime stack. The container comprises Python and MySQL databases on an Debian 11 Linux base for backend, along with Visual Studio Code (VSC) plugins customised to suit our requirements.

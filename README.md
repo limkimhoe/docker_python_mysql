@@ -47,8 +47,7 @@ After completion of this setup, it allows you to open or clone code in a local o
    <img width="360" alt="image" src="https://github.com/limkimhoe/docker-python-mongo-mysql/assets/22229616/bb808168-70f0-4b77-be58-2106e0e5e12f"><br/><br/>
  
    - VSC will reopen the folder to BACKEND folder, download, and install the necessary container files. This may take 5-15 minutes depending on your internet speed.<br/><br/>
-
-   <img width="959" alt="image" src="https://github.com/limkimhoe/Docker-Python-Frontend-Backend-Postgresql/assets/22229616/09241417-4020-412d-ad7f-f1a9096635e7"><br/><br/>
+  <img width="475" alt="302959132-09241417-4020-412d-ad7f-f1a9096635e7" src="https://github.com/user-attachments/assets/ee674fe1-e750-49e8-9578-5ef763639c5f"><br/><br/>
 
   
 ## Congratulations! Your setup is complete, and you are ready for Python development!

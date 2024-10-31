@@ -19,7 +19,7 @@ services:
 
     # Runs app on the same network as the database container, allows "forwardPorts" in devcontainer.json function.
     networks: 
-      - backend_network
+      - python_network
 
     # Overrides default command so things don't shut down after the process ends.
     command: sleep infinity
@@ -32,7 +32,7 @@ services:
     # Use "forwardPorts" in **devcontainer.json** to forward an app port locally.
     # (Adding the "ports" property to this file will not forward from a Codespace.)
 
-  db:
+  db_mysql:
     image: mysql:latest
     restart: unless-stopped
     volumes:
@@ -44,17 +44,34 @@ services:
       MYSQL_PASSWORD: password
 
     ports:
-     - "3307:3306"
+     - "3305:3306"
 
     networks: 
-      - backend_network
+      - python_network
+
+  db_postgres:
+    image: postgres:latest
+    restart: unless-stopped
+    volumes:
+      - pgdb_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: mydatabase
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+    # expose:
+    #   - "5432"
+    ports:
+      - "5431:5432"
+    networks: 
+      - python_network
+    
 
     # Add "forwardPorts": ["5432"] to **devcontainer.json** to forward PostgreSQL locally.
     # (Adding the "ports" property to this file will not forward from a Codespace.)
 
 networks:
-  backend_network:
-    driver: bridge
+  python_network:
 
 volumes:
   mysql_data:
+  pgdb_data:
